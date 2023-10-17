@@ -1,0 +1,9 @@
+def search_substr(subst, st):
+    if subst.lower() in st.lower():
+        	return 'Есть контакт!'
+    else:
+    	return 'Мимо!'
+
+print(search_substr('Мол', 'моТокОл'))
+print(search_substr('Молокок', 'молокоК'))
+print(search_substr('Мол', 'Пво'))
