@@ -1,0 +1,17 @@
+from collections import OrderedDict
+dct = OrderedDict({1: 1, 2: 2, 3: 3, 4: 4, 5: 5})
+
+first = list(dct.items())[0]
+last = list(dct.items())[-1]
+dct.move_to_end(key=first[0])
+dct.move_to_end(key=last[0], last=False)
+
+second = list(dct.items())[1]
+del dct[second[0]]
+dct['new_key'] = 'new_value'
+my_dict
+{5: 5, 3: 3, 4: 4, 1: 1, 'new_key': 'new_value'}
+id(my_dict)
+17128656
+start_dict_id
+17128656
