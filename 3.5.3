@@ -1,0 +1,14 @@
+x='+11+'
+def ps(x):
+    cnd=0
+    for i in range(len(x)):
+        if i %2 == 0:
+            if x[i]=='+':
+                pass
+            else:
+                cnd+=1
+    if cnd == 0:
+        return(True)
+    else:
+        return('NO')
+print(ps(x))
