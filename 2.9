@@ -1,0 +1,8 @@
+a=['a','b']
+b=['a','b','c','d']
+def f(a,b):
+    for i in range(len(a)):
+        if a[i] in b:
+            b.remove(a[i])
+    print(b)
+f(a,b)   
