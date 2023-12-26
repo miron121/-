@@ -1,0 +1,2 @@
+def man_ant_sum(string):
+    return sum(map(int,''.join(map(lambda x: ' ' if x.isalpha() else x, string)).split()))
