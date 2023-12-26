@@ -1,0 +1,7 @@
+def man_rus(text):
+    text = text.replace('а', '4')
+    text = text.replace('е', '3')
+    text = text.replace('и', '1')
+    text = text.replace('о', '0')
+    text = text.replace('с', '5')
+    return text
