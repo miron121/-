@@ -1,0 +1,5 @@
+def man_trend(my_list):
+    for el in my_list:
+        if type(el) == str:
+            return 'Строкам тут не место!'
+    return True if sorted(my_list) == my_list else False
