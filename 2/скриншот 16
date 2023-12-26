@@ -1,0 +1,7 @@
+import functools
+def total_volume(*boxes):
+    res = []
+    for el in boxes:
+        res.append(functools.reduce(lambda x, y: x * y, el))
+
+    return sum(res)
