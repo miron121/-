@@ -1,0 +1,5 @@
+def man(phrase):
+    for sing in '?!':
+        if phrase[-1] == sing:
+            phrase = phrase.strip(sing) + sing
+    return phrase
