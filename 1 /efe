@@ -131,17 +131,7 @@ def key_release(event):
 root.bind('<Key>', key_press)
 root.bind('<KeyRelease>', key_release)
  
-while 1:
-    if game:
-        b.move()
-    g2.move()
-    g1.move()
-    if b.goal == 1:
-        g2.score += 1
-        b.goal = 0
-    elif b.goal == 2:
-        g1.score += 1
-        b.goal = 0
+
     time.sleep(0.02)
     canv.update()   
      
