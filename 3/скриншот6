@@ -1,0 +1,8 @@
+def how_strong_is_password(password):
+    total = 0
+    total += len(password) >= 6
+    total += any([x.isdigit() for x in password])
+    total += any([x.isupper() for x in password])
+    total += any([x.islower() for x in password])
+    total += any([not x.isalnum() for x in password])
+    return total
