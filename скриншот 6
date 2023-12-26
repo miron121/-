@@ -1,0 +1,10 @@
+def convert_time(time):
+    add_hours = { 'am': 0, 'pm': 12}
+    appendix = { 0: 'am', 1: 'pm' }
+    subs = time.split()
+    if len(subs) > 1: # is 12-hour format
+        hm = subs[0].split(':')
+        return f"{(int(hm[0])%12)+add_hours.get(subs[1])}:{hm[1]}"
+    else: # is 24-hour format
+        hm = time.split(':')
+        return f"{int(hm[0])%12}:{hm[1]} {appendix.get(int(hm[0])//12)}"
