@@ -1,0 +1,7 @@
+def man(sign1, sign2):
+    if (sign1 == 'камень' and sign2 == 'ножницы') or (sign1 == 'ножницы' and sign2 == 'бумага') or(sign1 == 'бумага' and sign2 == 'камень'):
+        return 'Победил первый игрок'
+    elif sign1 == sign2:
+        return 'Ничья'
+    else:
+        return 'Победил второй игрок'
