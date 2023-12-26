@@ -1,0 +1,61 @@
+def num_to_man(num):
+	result = ''
+	ed_dict = {
+				0: 'ноль ',
+				1: 'один ',
+				2: 'два ',
+				3: 'три ',
+				4: 'четыре ',
+				5: 'пять ',
+				6: 'шесть ',
+				7: 'семь ',
+				8: 'восемь ',
+				9: 'девять '
+				}
+	double_dict = {10: 'десять ',
+				11: 'одиннадцать ',
+				12: 'двенадцать ',
+				13: 'тринадцать ',
+				14: 'четырнадцать ',
+				15: 'пятнадцать ',
+				16: 'шеснадцать ',
+				17: 'семнадцать ',
+				18: 'восемнадцать ',
+				19: 'девятнадцать ',
+				}
+	sot_dict = {
+				1: 'сто ',
+				2: 'двести ',
+				3: 'триста ',
+				4: 'четыресто ',
+				5: 'пятьсот ',
+				6: 'шестьсот ',
+				7: 'семьсот ',
+				8: 'восемьсот ',
+				9: 'девятьсот '
+				}
+	des_dict = {
+				0: '',
+				2: 'двадцать ',
+				3: 'тридцать ',
+				4: 'сорок ',
+				5: 'пятьдесят ',
+				6: 'шестьдесят ',
+				7: 'семьдесят ',
+				8: 'восемьдесят ',
+				9: 'девяносто '
+				}
+	my_list = [int(x) for x in str(num)]
+	if len(my_list) == 3:
+		if 10 <= int(str(my_list[-2]) + str(my_list[-1])) <= 19:
+			result = sot_dict[my_list[-3]] + double_dict[int(str(my_list[-2]) + str(my_list[-1]))]
+		else:
+			result = sot_dict[my_list[-3]] + des_dict[my_list[-2]] + ed_dict[my_list[-1]]
+	elif len(my_list) == 2:
+		if 10 <= int(str(my_list[-2]) + str(my_list[-1])) <= 19:
+			result = double_dict[int(str(my_list[-2]) + str(my_list[-1]))]
+		else:
+			result = des_dict[my_list[-2]] + ed_dict[my_list[-1]]
+	else:
+		result = ed_dict[my_list[-1]]
+	return result[:-1]
